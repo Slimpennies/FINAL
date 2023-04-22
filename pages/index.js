@@ -100,7 +100,7 @@ export default function Home() {
                 NewAmountToStake],
                 {gasLimit: 120000}
               );
-              alert("Tokens approved successfully!");
+              window.alert("Tokens approved successfully!");
             }}
 
           >
@@ -113,7 +113,7 @@ export default function Home() {
             action={async (contract) => {
               await contract.call("stake", [NewAmountToStake]
               );
-              alert("Tokens staked successfully!");
+              window.alert("Tokens staked successfully!");
             }}
 
           >
@@ -128,7 +128,7 @@ export default function Home() {
                 "withdraw",
                 [NewAmountToStake]
               );
-              alert("Tokens unstaked successfully!");
+              window.alert("Tokens unstaked successfully!");
             }}
 
           >
@@ -140,7 +140,7 @@ export default function Home() {
             contractAddress={stakingContractAddress}
             action={async (contract) => {
               await contract.call("claimRewards");
-              alert("Rewards claimed successfully!");
+              window.alert("Rewards claimed successfully!");
             }}
           >
             Claim rewards!
