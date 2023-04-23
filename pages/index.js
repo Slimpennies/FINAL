@@ -12,6 +12,7 @@ import { ethers } from "ethers";
 
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
+import { toast } from "react-toastify";
 
 const stakingContractAddress = "0x9c5B82d68C54fff9c615022B51dE17bc3Ee03aD2";
 
@@ -93,16 +94,8 @@ export default function Home() {
           <Web3Button
             className={styles.button}
             contractAddress={stakingTokenAddress}
-            action={async (contract) => {
-              await contract.call(
-                "approve",
-                [stakingContractAddress,
-                NewAmountToStake],
-                {gasLimit: 120000}
-              );
-              window.alert("Tokens approved successfully!");
-            }}
-
+            action={(contract) => contract.call("approve", [stakingContractAddress, NewAmountToStake], {gasLimit: 200000})}
+            onSuccess={(result) => window.alert("Giraffe Approved to Stake")}
           >
             Approve!
           </Web3Button>
@@ -110,12 +103,8 @@ export default function Home() {
           <Web3Button
             className={styles.button}
             contractAddress={stakingContractAddress}
-            action={async (contract) => {
-              await contract.call("stake", [NewAmountToStake]
-              );
-              window.alert("Tokens staked successfully!");
-            }}
-
+            action={(contract) => contract.call("withdraw", [NewAmountToStake])}
+            onSuccess={(result) => window.alert("Giraffe Staked")}
           >
             Stake!
           </Web3Button>
@@ -123,14 +112,8 @@ export default function Home() {
           <Web3Button
             className={styles.button}
             contractAddress={stakingContractAddress}
-            action={async (contract) => {
-              await contract.call(
-                "withdraw",
-                [NewAmountToStake]
-              );
-              window.alert("Tokens unstaked successfully!");
-            }}
-
+            action={(contract) => contract.call("withdraw", [NewAmountToStake])}
+            onSuccess={(result) => window.alert("Giraffe Unstaked")}
           >
             Unstake!
           </Web3Button>
@@ -138,10 +121,8 @@ export default function Home() {
           <Web3Button
             className={styles.button}
             contractAddress={stakingContractAddress}
-            action={async (contract) => {
-              await contract.call("claimRewards");
-              window.alert("Rewards claimed successfully!");
-            }}
+            action={(contract) => contract.call("claimRewards")}
+            onSuccess={(result) => window.alert("Baby Giraffe Claimed")}
           >
             Claim rewards!
           </Web3Button>
