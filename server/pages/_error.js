@@ -5,7 +5,7 @@ exports.id = 820;
 exports.ids = [820];
 exports.modules = {
 
-/***/ 499:
+/***/ 641:
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -18,9 +18,9 @@ Object.defineProperty(exports, "default", ({
         return Error;
     }
 }));
-const _interop_require_default = __webpack_require__(167);
+const _interop_require_default = __webpack_require__(42);
 const _react = /*#__PURE__*/ _interop_require_default._(__webpack_require__(689));
-const _head = /*#__PURE__*/ _interop_require_default._(__webpack_require__(636));
+const _head = /*#__PURE__*/ _interop_require_default._(__webpack_require__(808));
 const statusCodes = {
     400: "Bad Request",
     404: "This page could not be found",
@@ -120,7 +120,7 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 
 /***/ }),
 
-/***/ 636:
+/***/ 808:
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -142,9 +142,9 @@ _export(exports, {
         return _default;
     }
 });
-const _extends = __webpack_require__(741);
-const _interop_require_default = __webpack_require__(167);
-const _interop_require_wildcard = __webpack_require__(760);
+const _extends = __webpack_require__(523);
+const _interop_require_default = __webpack_require__(42);
+const _interop_require_wildcard = __webpack_require__(963);
 const _react = /*#__PURE__*/ _interop_require_wildcard._(__webpack_require__(689));
 const _sideeffect = /*#__PURE__*/ _interop_require_default._(__webpack_require__(470));
 const _ampcontext = __webpack_require__(918);
@@ -337,7 +337,7 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ 741:
+/***/ 523:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -359,7 +359,7 @@ function _extends() {
 
 /***/ }),
 
-/***/ 167:
+/***/ 42:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -372,7 +372,7 @@ function _interop_require_default(obj) {
 
 /***/ }),
 
-/***/ 760:
+/***/ 963:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -424,7 +424,7 @@ function _interop_require_wildcard(obj, nodeInterop) {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(499));
+var __webpack_exports__ = (__webpack_exec__(641));
 module.exports = __webpack_exports__;
 
 })();
