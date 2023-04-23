@@ -12,7 +12,7 @@ import { ethers } from "ethers";
 
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
-import { toast } from "react-toastify";
+
 
 const stakingContractAddress = "0x9c5B82d68C54fff9c615022B51dE17bc3Ee03aD2";
 
