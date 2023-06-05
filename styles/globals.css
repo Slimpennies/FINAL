@@ -22,13 +22,3 @@ body {
   color: #e7e8e8;
   background: #0f1318;
 }
-.Toastify__toast-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.toast-wrapper {
-  position: relative;
-}

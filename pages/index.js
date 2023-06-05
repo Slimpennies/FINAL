@@ -10,9 +10,6 @@ import {
 
 import { ethers } from "ethers";
 
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
@@ -103,7 +100,7 @@ export default function Home() {
                 NewAmountToStake],
                 {gasLimit: 120000}
               );
-              toast.success("Tokens approved successfully!");
+              alert("Tokens approved successfully!");
             }}
 
           >
@@ -116,7 +113,7 @@ export default function Home() {
             action={async (contract) => {
               await contract.call("stake", [NewAmountToStake]
               );
-              toast.success("Tokens staked successfully!");
+              alert("Tokens staked successfully!");
             }}
 
           >
@@ -131,7 +128,7 @@ export default function Home() {
                 "withdraw",
                 [NewAmountToStake]
               );
-              toast.success("Tokens unstaked successfully!");
+              alert("Tokens unstaked successfully!");
             }}
 
           >
@@ -143,7 +140,7 @@ export default function Home() {
             contractAddress={stakingContractAddress}
             action={async (contract) => {
               await contract.call("claimRewards");
-              toast.success("Rewards claimed successfully!");
+              alert("Rewards claimed successfully!");
             }}
           >
             Claim rewards!
