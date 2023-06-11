@@ -168,7 +168,7 @@ export default function Home() {
           <a className={styles.card}>
             <h2> Claimable Baby Giraffe</h2>
             <p>
-              {stakeInfo && ethers.utils.formatEther(stakeInfo[0].toString(), "gwei")}
+              {stakeInfo && ethers.utils.formatEther(stakeInfo[1].toString(), "gwei")}
             </p>
           </a>
         </div>
